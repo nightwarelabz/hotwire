@@ -1,0 +1,2 @@
+weapon-usp usp_pistol.glb 248 14c678c0161f78538f45324d3567dacf96451f139a3e16c6b4579d021f66ef53
+dock-bollard dock_bollard.glb 1084 3901cb9bcf520d9207de1c72101ee8ced43469318799ad1aeee809c977d2fd8b
