@@ -1,0 +1,25 @@
+[package]
+name = "hotwire"
+version = "0.1.0"
+edition = "2021"
+description = "The C35 x Blender bridge: glTF (.glb) to .c35m converter with era enforcement"
+license = "AGPL-3.0-only"
+
+[[bin]]
+name = "hotwire"
+path = "src/main.rs"
+
+[dependencies]
+gltf = { version = "1", features = ["names"] }
+serde = { version = "1", features = ["derive"] }
+sha2 = "0.10"
+toml = "0.8"
+
+# The shipped hotwire binary does NOT depend on the c35 crate.
+# (The engine-load proof — loading a converted .c35m with the engine's
+# own modeler::format::load_from — is run workspace-locally against a
+# sibling C35 checkout; it is deliberately not a dependency here, so
+# this repo stands alone.)
+
+[profile.release]
+opt-level = 3
